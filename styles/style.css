@@ -1,0 +1,211 @@
+.homepage{
+    max-width: 2300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+h1{
+    font-size: clamp(2rem, 5vw, 5rem);
+    color: var(--color-quaternary);
+    text-transform: uppercase;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.form_group{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-search{
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.btn-search::after{
+    content: "\f2e7";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: var(--color-primary);
+    font-size: clamp(1.6rem, 3vw, 2.5rem);
+}
+
+.form_input{
+    width: 100%;
+    height: 60px;
+    padding-left: 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+.form_input:focus,
+.btn-search:focus,
+.btn-random:focus,
+select:focus{
+    outline: 3px solid var(--color-tertiary);
+}
+
+::placeholder{
+    color: var(--color-primary);
+}
+
+.form_group:nth-child(2){
+   justify-content: space-around;
+}
+
+select{
+    height: 40px;
+    border-radius: 5px;
+    padding: 0 5px;
+    border: none;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    cursor: pointer;
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+}
+
+.btn-random{
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+}
+
+/* MEAL */
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.main_not_found{
+    text-align: center;
+    color: var(--color-quaternary);
+}
+
+.main_not_found h2{
+    font-size: clamp(2.4rem, 4vw, 5rem);
+}
+
+.main_not_found p{
+    margin-top: 10px;
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+}
+
+.meal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--color-secondary);
+}
+
+.meal h3{
+    width: 90%;
+    font-size: clamp(1.6rem, 4vw, 3rem);
+    color: var(--color-primary);
+    letter-spacing: 2px;
+    text-align: center;
+    text-overflow: ellipsis; 
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.meal_img{
+    width: 100%;
+    height: 70%;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.meal_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+.btn_meal{
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.btn_meal:hover,
+.btn_meal:focus{
+    color: var(--color-tertiary);
+}
+
+@media screen and (max-width: 768px){
+    .form_input{
+        height: 40px;
+        padding-left: 10px;
+    }
+
+    .btn-search{
+        right: 10px;
+    }
+
+    .form_group:nth-child(2){
+        justify-content: space-between;
+    }
+    
+    select,
+    .btn-random{
+        height: 30px;
+    }
+
+    select{
+        padding: 0 5px;
+    }
+
+    .meal{
+        padding: 5px;
+        height: 300px;
+    }
+    
+}

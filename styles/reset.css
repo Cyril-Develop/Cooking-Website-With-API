@@ -1,0 +1,36 @@
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-primary : #171d2f;
+    --color-secondary : #a2a8ba;
+    --color-tertiary : #fcbe84;
+    --color-quaternary : #f9f9f9;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Playfair Display', serif;
+    background-color: var(--color-primary);
+}
+
+a{
+    text-decoration: none;
+    color: unset;
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--color-tertiary);
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--color-primary);
+}
