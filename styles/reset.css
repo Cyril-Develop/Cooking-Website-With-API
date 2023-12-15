@@ -17,6 +17,11 @@ html{
     background-color: var(--color-primary);
 }
 
+body{
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
 a{
     text-decoration: none;
     color: unset;
